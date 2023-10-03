@@ -1,0 +1,25 @@
+---
+import RentButton from "@components/buttons/RentButton.astro";
+---
+
+<section class="mt-20" id="rent">
+  <h1 class="font-syne-bold text-5xl text-mainblue text-center">
+    Alquiler de equipamiento
+  </h1>
+  <div class="grid grid-cols-3 items-center justify-center mt-5">
+    <div class="col-span-1 px-10">
+      <RentButton text="Playstation 4" />
+      <RentButton text="Realidad Virtual" />
+      <RentButton text="Simulador Conducción" />
+    </div>
+    <div class="col-span-1 px-10">
+      <RentButton text="Playstation 5" />
+      <RentButton text="Bicicleta Zycle" />
+      <RentButton text="Nintendo Wii" />
+    </div>
+    <div class="col-span-1">
+      <RentButton text="Nintendo Switch" />
+      <RentButton text="PC Gaming" />
+    </div>
+  </div>
+</section>
