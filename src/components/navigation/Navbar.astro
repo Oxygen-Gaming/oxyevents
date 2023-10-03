@@ -1,0 +1,34 @@
+---
+import Logo from "@components/Logo.astro";
+import NavButton from "@components/navigation/NavButton.astro";
+import GeneralButton from "@components/buttons/GeneralButton.astro";
+import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro";
+---
+
+<nav
+  class="fixed w-full z-20 top-0 left-0 border-b-2 border-blue-900 bg-[#060A5F]"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
+  >
+    <Logo />
+    <div class="flex md:order-2 bg-[#020534]">
+      <GeneralButton text="Contacta con nosotros" />
+      <NavbarMobileButton />
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 mt-4 font-medium border border-[#040952] rounded-lg bg-mainblue md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <NavButton name="Home" url="#home" />
+        <NavButton name="About Us" url="#about" />
+        <NavButton name="Eventos" url="#events" />
+        <NavButton name="Alquiler" url="#rent" />
+        <NavButton name="Clientes" url="#clients" />
+      </ul>
+    </div>
+  </div>
+</nav>
