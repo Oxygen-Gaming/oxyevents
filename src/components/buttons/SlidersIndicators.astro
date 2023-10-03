@@ -1,0 +1,10 @@
+---
+const { number } = Astro.props;
+---
+
+<button
+  type="button"
+  class="w-3 h-3 rounded-full"
+  aria-current="true"
+  aria-label=`Image ${number+1}`
+  data-carousel-slide-to={number}></button>
