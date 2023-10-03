@@ -1,0 +1,18 @@
+---
+const { socialnetwork, url } = Astro.props;
+---
+
+<li class="mx-4">
+  <a
+    class="group transition text-white clickable"
+    href={url}
+    title=`${socialnetwork} Profile`
+    target="_blank"
+  >
+    <img
+      class="w-10 h-10 lg:w-10 lg:h-10 xl:w-10 xl:h-10 mx-2 hover:contrast-200"
+      src=`./svgs/social/${socialnetwork}.svg`
+      alt=`${socialnetwork} Profile`
+    /></a
+  >
+</li>

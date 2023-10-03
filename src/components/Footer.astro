@@ -1,0 +1,66 @@
+---
+import Container from "@components/Container.astro";
+import Logo from "@components/Logo.astro";
+import SocialNetworks from "@components/social-networks/SocialNetworks.astro";
+import Separator from "@components/Separator.astro";
+---
+
+<footer
+  class="page-footer text-white w-full p-8 border-t-2 border-blue-900 bg-[#060A5F] overflow-hidden [&>div]:relative [&>div]:z-10 mb-0"
+>
+  <Container>
+    <div class="grid md:grid-cols-3 grid-cols-1">
+      <div class="col-span-1 p-5">
+        <a href="/">
+          <Logo />
+        </a>
+      </div>
+      <div class="col-span-1 p-5">
+        <a href="/">
+          <span class="text-white font-syne-bold md:text-xl"
+            >contacto@oxygengaming.es</span
+          >
+        </a>
+      </div>
+      <div class="col-span-1 p-5">
+        <SocialNetworks />
+      </div>
+    </div>
+  </Container>
+  <Separator />
+  <Container>
+    <div class="grid grid-cols-2">
+      <div class="col-span-1 p-5">
+        <a href="/">
+          <nav
+            class="flex md:flex-row flex-col lg:flex-row gap-3 md:gap-4 n w-full align-middle items-end md:text-xl font-syne-bold"
+          >
+            <a class="md:opacity-50 hover:opacity-100" href="#">Home</a>
+            <a class="md:opacity-50 hover:opacity-100" href="#about">About Us</a
+            >
+            <a class="md:opacity-50 hover:opacity-100" href="#events">Eventos</a
+            >
+            <a class="md:opacity-50 hover:opacity-100" href="#rent">Alquiler</a>
+            <a class="md:opacity-50 hover:opacity-100" href="#clients"
+              >Clientes</a
+            >
+          </nav>
+        </a>
+      </div>
+      <div class="col-span-1 p-5 font-general-sans-regular">
+        <span
+          >Designed and built by <span
+            class="bg-mainblue bg-clip-text text-transparent font-general-sans-bold"
+            >Ángel Angulo</span
+          > with <span
+            class="bg-mainblue bg-clip-text text-transparent font-general-sans-bold"
+            >Love</span
+          > & <span
+            class="bg-mainblue bg-clip-text text-transparent font-general-sans-bold"
+            >Enthusiasm</span
+          ></span
+        >
+      </div>
+    </div>
+  </Container>
+</footer>
