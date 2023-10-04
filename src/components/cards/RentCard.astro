@@ -1,0 +1,12 @@
+---
+const { text, img } = Astro.props;
+---
+
+<div
+  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266]"
+>
+  <a href="#">
+    <img class="rounded-t-lg aspect-square" src=`rents/${img}` alt={text} />
+  </a>
+  <h5 class="font-syne-bold text-xl text-white mt-2">{text}</h5>
+</div>

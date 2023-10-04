@@ -13,7 +13,7 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
   >
     <Logo />
     <div class="flex md:order-2">
-      <GeneralButton text="Contacto" />
+      <GeneralButton text="Contacto" href="mailto:info@oxygengaming.es" />
       <NavbarMobileButton />
     </div>
     <div
@@ -23,11 +23,11 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
       <ul
         class="flex flex-col p-4 mt-4 font-medium border border-[#040952] rounded-lg bg-mainblue md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
-        <NavButton name="Home" url="#home" />
-        <NavButton name="About Us" url="#about" />
-        <NavButton name="Eventos" url="#events" />
-        <NavButton name="Alquiler" url="#rent" />
-        <NavButton name="Clientes" url="#clients" />
+        <NavButton name="Home" url="/" />
+        <NavButton name="About Us" url="/about-us" />
+        <NavButton name="Eventos" url="/eventos" />
+        <NavButton name="Alquiler" url="/alquiler" />
+        <NavButton name="Clientes" url="/clientes" />
       </ul>
     </div>
   </div>
