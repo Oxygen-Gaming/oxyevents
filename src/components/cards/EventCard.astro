@@ -7,7 +7,11 @@ const { name, img, date, description, images } = Astro.props;
   class="max-w-sm bg-[#11123b] border border-[#212266] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
 >
   <a href="#">
-    <img class="rounded-t-lg aspect-square" src=`events/${img}` alt={name} />
+    <img
+      class="rounded-t-lg aspect-square"
+      src=`events/${img}.webp`
+      alt={name}
+    />
   </a>
   <div class="p-5">
     <a href="#">

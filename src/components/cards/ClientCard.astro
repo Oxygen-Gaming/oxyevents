@@ -5,5 +5,10 @@ const { name, img } = Astro.props;
 <div
   class="min-w-full bg-white rounded-lg flex items-center justify-center p-2"
 >
-  <img class="rounded-lg h-24" src=`clients/${img}` alt={name} title={name} />
+  <img
+    class="rounded-lg h-24"
+    src=`clients/${img}.webp`
+    alt={name}
+    title={name}
+  />
 </div>
