@@ -15,20 +15,20 @@ This project is an informative website about Oxygen Gaming Events, a company tha
 
 ### Home
 
-![Home preview](https://github.com/kaixe455/oxyevents/blob/master/preview.png?raw=true)
+![Home preview](https://github.com/kaixe455/oxyevents/blob/main/preview.png?raw=true)
 
 ### About us
 
-![About us preview](https://github.com/kaixe455/oxyevents/blob/master/aboutus.png?raw=true)
+![About us preview](https://github.com/kaixe455/oxyevents/blob/main/aboutus.png?raw=true)
 
 ### Events
 
-![Events page preview](https://github.com/kaixe455/oxyevents/blob/master/events.png?raw=true)
+![Events page preview](https://github.com/kaixe455/oxyevents/blob/main/events.png?raw=true)
 
 ### Rent page
 
-![Rent page preview](https://github.com/kaixe455/oxyevents/blob/master/rent.png?raw=true)
+![Rent page preview](https://github.com/kaixe455/oxyevents/blob/main/rent.png?raw=true)
 
 ### Clients
 
-![Clients page preview](https://github.com/kaixe455/oxyevents/blob/master/clients.png?raw=true)
+![Clients page preview](https://github.com/kaixe455/oxyevents/blob/main/clients.png?raw=true)
