@@ -1,6 +1,6 @@
-# Oxygen-Gaming: esports club
+# OxyEvents: Events Organisation
 
-> 🧑‍🚀 **Oxygen Gaming** Look at this project!
+> 🧑‍🚀 **Oxyevents** Look at this project!
 
 This project is an informative website about Oxygen Gaming Events, a company that organise events. In this webpage we can see their events, clients, information about them and also the services they offer.
 
