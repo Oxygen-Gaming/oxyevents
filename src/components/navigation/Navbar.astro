@@ -3,6 +3,7 @@ import Logo from "@components/Logo.astro";
 import NavButton from "@components/navigation/NavButton.astro";
 import GeneralButton from "@components/buttons/GeneralButton.astro";
 import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro";
+import DropDownButton from "@components/navigation/DropDownButton.astro";
 ---
 
 <nav
@@ -26,7 +27,7 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
         <NavButton name="Home" url="/" />
         <NavButton name="Sobre Nosotros" url="/about-us" />
         <NavButton name="Eventos" url="/eventos" />
-        <NavButton name="Alquiler" url="/alquiler" />
+        <DropDownButton name="Servicios" />
         <NavButton name="Clientes" url="/clientes" />
       </ul>
     </div>
