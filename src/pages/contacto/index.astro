@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import Section from "@components/Section.astro";
+import ContactForm from "@components/forms/ContactForm.astro";
+---
+
+<Layout title="Oxygen Gaming Eventos - Contacto">
+  <main class="text-white">
+    <Container>
+      <section class="mt-20" id="events">
+        <Section title="Contacta con nosotros" />
+        <h2
+          class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center text-xl"
+        >
+          Puede communicarse con nosotros a través de nuestro correo electrónico
+          info@oxygengaming.es o por el formulario de contacto que se muestra a
+          continuación.
+        </h2>
+        <div class="grid grid-cols-1 items-center justify-center mt-5 mb-5">
+          <div class="col-span-1">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+    </Container>
+  </main>
+</Layout>

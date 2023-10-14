@@ -1,0 +1,122 @@
+---
+import Brevo from "@getbrevo/brevo";
+
+const API_KEY = import.meta.env.EMAIL_API;
+
+const defaultClient = Brevo.ApiClient.instance;
+
+// Configure API key authorization: api-key
+const apiKey = defaultClient.authentications["api-key"];
+apiKey.apiKey = API_KEY;
+const partnerKey = defaultClient.authentications["partner-key"];
+partnerKey.apiKey = API_KEY;
+
+var tranEmailApi = new Brevo.TransactionalEmailsApi();
+
+if (Astro.request.method === "POST") {
+  try {
+    // Getting posted data from our contact form
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+
+    // TODO: Do not forget to do validation and error handling over received data from your contact form.
+    const subject = "Contacto formulario Oxygen Eventos";
+    // Sending email
+    let msg = "<p>Nombre: " + name + "</p>";
+    msg += "<p>Email: " + email + "</p>";
+    msg += "<p>Mensaje: " + message + "</p>";
+    const sender = {
+      email: "angel.angulo.pam@gmail.com",
+      name: "Oxygen Eventos",
+    };
+    const receivers = [
+      {
+        email: "info@oxygengaming.es",
+      },
+    ];
+    await tranEmailApi
+      .sendTransacEmail({
+        sender,
+        to: receivers,
+        subject: subject,
+        htmlContent: msg,
+      })
+      .catch(console.log);
+  } catch (err) {
+    console.log(err);
+  }
+}
+---
+
+<section class="bg-mainblue rounded-xl p-6 dark:bg-gray-900">
+  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    <form method="POST" class="space-y-8">
+      <div>
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-white dark:text-gray-300 font-syne-bold"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="info@oxygengaming.es"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="name"
+          class="block mb-2 text-sm font-medium text-white font-syne-bold dark:text-gray-300"
+          >Nombre</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="Introduzca su nombre"
+          required
+        />
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-white dark:text-gray-400 font-syne-bold"
+          >Tu mensaje</label
+        >
+        <textarea
+          id="message"
+          rows="6"
+          name="message"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          placeholder="¿En que podemos ayudarte?"></textarea>
+      </div>
+      <div class="sm:col-span-2">
+        <div class="checker" id="uniform-customer_privacy">
+          <input
+            type="checkbox"
+            value="0"
+            required
+            name="customer_privacy"
+            autocomplete="off"
+          />
+          <label for="newsletter-input" class="ml-3"
+            ><a href="https://oxygengaming.es/politica-de-privacidad/"
+              >Acepto politica de Privacidad</a
+            ></label
+          >
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#060A5F] sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+        >Enviar formulario</button
+      >
+    </form>
+  </div>
+</section>

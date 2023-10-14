@@ -3,6 +3,7 @@ import Logo from "@components/Logo.astro";
 import NavButton from "@components/navigation/NavButton.astro";
 import GeneralButton from "@components/buttons/GeneralButton.astro";
 import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro";
+import DropDownButton from "@components/navigation/DropDownButton.astro";
 ---
 
 <nav
@@ -13,7 +14,7 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
   >
     <Logo />
     <div class="flex md:order-2">
-      <GeneralButton text="Contacto" href="mailto:info@oxygengaming.es" />
+      <GeneralButton text="Contacto" href="/contacto" />
       <NavbarMobileButton />
     </div>
     <div
@@ -24,9 +25,9 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
         class="flex flex-col p-4 mt-4 font-medium border border-[#040952] rounded-lg bg-mainblue md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
         <NavButton name="Home" url="/" />
-        <NavButton name="About Us" url="/about-us" />
+        <NavButton name="Sobre Nosotros" url="/about-us" />
         <NavButton name="Eventos" url="/eventos" />
-        <NavButton name="Alquiler" url="/alquiler" />
+        <DropDownButton name="Servicios" />
         <NavButton name="Clientes" url="/clientes" />
       </ul>
     </div>
