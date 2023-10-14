@@ -1,13 +1,63 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
-import AboutSection from "@components/sections/AboutSection.astro";
+import Section from "@components/Section.astro";
 ---
 
 <Layout title="Oxygen Gaming Eventos - Sobre Nosotros">
   <main class="text-white md:-mt-44">
     <Container>
-      <AboutSection />
+      <section class="lg:mt-48 mt-12 p-10" id="about">
+        <Section title="Sobre Nosotros" />
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 p-6 items-center justify-center"
+        >
+          <div class="col-span-1">
+            <img
+              src="/imgs/event2.webp"
+              class="h-96 mr-3 mt-10 rounded-lg bg-blend-color-burn transition-all duration-300"
+              alt="Imagen de un evento"
+            />
+          </div>
+          <div class="col-span-1 text-lg">
+            <p class="font-general-sans-regular text-[#CFD1FF] mt-7">
+              El proyecto surge con el objetivo de fomentar la buena praxis de
+              los deportes electrónicos creando un espacio sano, interactivo y
+              entretenido para todos los públicos, buscando la sinergia perfecta
+              entre el deporte y el Gaming.
+            </p>
+            <p class="font-general-sans-regular text-[#CFD1FF] mt-7">
+              Nuestros eventos aportan todo lo necesario para disfrutar de
+              jornadas con modelos de entretenimiento innovadores. Realizamos
+              actividades adaptadas a todo tipo de público donde mostramos que
+              el deporte tradicional y las nuevas tecnologías son perfectos
+              aliados para trabajar el desarrollo físico y cognitivo de los
+              niños y jóvenes.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 p-6 items-center justify-center"
+        >
+          <div class="col-span-1">
+            <p class="font-general-sans-regular text-lg text-[#CFD1FF] mt-7">
+              Cada vez más jóvenes y niños disfrutan de los deportes
+              electrónicos y el mundo gaming, por lo que nuestro objetivo
+              principal es mostrar que se pueden generar experiencias y
+              emociones siempre bajo un uso responsable de los videojuegos. Esto
+              sumado a los valores doportivos forman un tándem perfecto para
+              disfrutar de una jornada llena de entretenimiento.
+            </p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="/imgs/minigolf.webp"
+              class="h-96 ml-3 mt-10 rounded-lg bg-blend-color-burn transition-all duration-300"
+              alt="Imagen de un mini golf"
+            />
+          </div>
+        </div>
+      </section>
     </Container>
   </main>
 </Layout>
