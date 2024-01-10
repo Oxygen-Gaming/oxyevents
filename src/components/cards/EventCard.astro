@@ -4,11 +4,11 @@ const { name, img, date, description, images } = Astro.props;
 ---
 
 <div
-  class="max-w-sm bg-mainblue border border-[#212266] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="max-w-sm bg-mainblue border border-[#212266] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
 >
   <a href="#">
     <img
-      class="rounded-t-lg aspect-square"
+      class="rounded-t-lg aspect-square hover:animate-[pulse_1s_ease-in-out_1] transition-all duration-500"
       src=`events/${img}.webp`
       alt={name}
     />
