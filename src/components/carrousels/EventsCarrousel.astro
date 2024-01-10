@@ -7,84 +7,136 @@ const { page } = Astro.props;
 <div class="grid lg:grid-cols-4 grid-cols-1">
   <div class="col-span-1 p-4">
     <EventCard
-      name="TORNEO FC24 MIGUEL HERNANDEZ"
-      img="miguelfifa"
+      name="CASAL JOVE TALES"
+      img="casaljovetales"
       images={imagesAlbal}
-      date="06-11-2023"
+      date="06-01-2024"
     />
   </div>
   <div class="col-span-1 p-4">
     <EventCard
-      name="TORNEO MARIO KART MIGUEL HERNANDEZ"
-      img="miguel"
+      name="EVENTO PUÇOL"
+      img="puzol"
       images={imagesAlbal}
-      date="16-10-2023"
+      date="03-01-2024"
     />
   </div>
   <div class="col-span-1 p-4">
     <EventCard
-      name="EVENTO AYUNTAMIENTO DE ALQUERIES"
-      img="alqueries"
+      name="EVENTO SANT JOAN DE MORÓ"
+      img="sanjoandemoro"
       images={imagesAlbal}
-      date="04-10-2023"
+      date="02-01-2024"
     />
   </div>
   <div class="col-span-1 p-4">
     <EventCard
-      name="EVENTO AYUNTAMIENTO DE ALCALÁ DE XIVERT ALCOSSEBRE"
-      img="alcosserbre"
+      name="EVENTO GESTALGAR"
+      img="gestalgar"
       images={imagesAlbal}
-      date="11-08-2023"
+      date="29-12-2023"
     />
   </div>
-  {(page &&
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="EVENTO ALBAL"
-      img="albal"
-      images={imagesAlbal}
-      date="15-07-2023"
-    />
-  </div>
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="EVENTO GANDÍA"
-      img="gandia"
-      images={imagesAlbal}
-      date="22-04-2023"
-    />
-  </div>
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="FALLA PLAZA DE LA MORERIA"
-      img="fallamoreria"
-      images={imagesAlbal}
-      date="12-03-2023"
-    />
-  </div>
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="EVENTO UNIVERSIDAD CATOLICA DE VALENCIA"
-      img="ucv"
-      images={imagesAlbal}
-      date="09-03-2023"
-    />
-  </div>
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="FALLA LA NOVA D'ORRIOLS"
-      img="fallanova"
-      images={imagesAlbal}
-      date="15-03-2023"
-    />
-  </div>
-  <div class="col-span-1 p-4">
-    <EventCard
-      name="LUGO GAMING FEST"
-      img="lugo"
-      images={imagesAlbal}
-      date="23-04-2022"
-    />
-  </div>
-)}
+  {
+    page && (
+      <>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO MELIANA"
+            img="meliana"
+            images={imagesAlbal}
+            date="26-12-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO MORAIRA"
+            img="moraira"
+            images={imagesAlbal}
+            date="27-12-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO ALBAL"
+            img="albal"
+            images={imagesAlbal}
+            date="15-07-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO GANDÍA"
+            img="gandia"
+            images={imagesAlbal}
+            date="22-04-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="FALLA PLAZA DE LA MORERIA"
+            img="fallamoreria"
+            images={imagesAlbal}
+            date="12-03-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO UNIVERSIDAD CATOLICA DE VALENCIA"
+            img="ucv"
+            images={imagesAlbal}
+            date="09-03-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="FALLA LA NOVA D'ORRIOLS"
+            img="fallanova"
+            images={imagesAlbal}
+            date="15-03-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="LUGO GAMING FEST"
+            img="lugo"
+            images={imagesAlbal}
+            date="23-04-2022"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="TORNEO FC24 MIGUEL HERNANDEZ"
+            img="miguelfifa"
+            images={imagesAlbal}
+            date="06-11-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="TORNEO MARIO KART MIGUEL HERNANDEZ"
+            img="miguel"
+            images={imagesAlbal}
+            date="16-10-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO AYUNTAMIENTO DE ALQUERIES"
+            img="alqueries"
+            images={imagesAlbal}
+            date="04-10-2023"
+          />
+        </div>
+        <div class="col-span-1 p-4">
+          <EventCard
+            name="EVENTO AYUNTAMIENTO DE ALCALÁ DE XIVERT ALCOSSEBRE"
+            img="alcosserbre"
+            images={imagesAlbal}
+            date="11-08-2023"
+          />
+        </div>
+      </>
+    )
+  }
 </div>
