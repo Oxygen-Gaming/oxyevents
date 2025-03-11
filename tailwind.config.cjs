@@ -18,7 +18,8 @@ module.exports = {
 				'syne-medium': ['Syne-Medium', 'system-ui', 'sans-serif'],
 				'general-sans-regular': ['GeneralSans-Regular', 'system-ui', 'sans-serif'],
 				'general-sans-bold': ['GeneralSans-Bold', 'system-ui', 'sans-serif'],
-				'general-sans-medium': ['GeneralSans-Medium', 'system-ui', 'sans-serif']
+				'general-sans-medium': ['GeneralSans-Medium', 'system-ui', 'sans-serif'],
+				'roboto': ['Roboto Condensed','sans-serif']
 			}
 		},
 	},
