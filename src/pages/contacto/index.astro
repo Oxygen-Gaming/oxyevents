@@ -8,20 +8,45 @@ import ContactForm from "@components/forms/ContactForm.astro";
 <Layout title="Oxygen Gaming Eventos - Contacto">
   <main class="text-white">
     <Container>
-      <section class="mt-20" id="events">
-        <Section title="Contacta con nosotros" />
-        <h2
-          class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center text-xl"
-        >
-          Puede communicarse con nosotros a través de nuestro correo electrónico
-          info@oxygengaming.es o por el formulario de contacto que se muestra a
-          continuación.
-        </h2>
-        <div class="grid grid-cols-1 items-center justify-center mt-5 mb-5">
-          <div class="col-span-1">
-            <ContactForm />
+      <section id="events">
+        <div class="flex flex-col items-center justify-center">
+		
+          <div class="p-10 text-center flex justify-center items-center flex-col gap-[5vh]">
+            <h1 class="text-6xl font-syne-bold text-mainblue">Contacto</h1>
+            <h3 class="text-[20px] font-syne-bold text-white">
+              Nos especializamos en crear y gestionar actividades y eventos de ocio para ayuntamientos. 
+              Escríbenos y descubre todas las opciones de entretenimiento y tiempo libre que podemos organizar en tu municipio.
+            </h3>
           </div>
         </div>
+        
+        <div class="z-[-10] absolute inset-0 opacity-20 h-auto w-full mt-[100px]">
+          <video autoplay muted loop class="w-full h-[60%] object-cover ">
+            <source src="./public/imgs/VideoInicio_Eventos.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <!-- Tarjetas -->
+        <div>
+          <div class="flex items-center justify-center  md:gap-20 lg:mt-[10vh] md:mt-[15vh]">
+            <div class="bg-white text-[#1AA9FF] w-[40%] h-[20vh] lg:w-[30%] lg:h-[30vh] flex flex-col justify-center items-center rounded-lg gap-[15px] md:w-[40%] md:h-[20vh] ">
+              <div class="bg-[#1AA9FF] text-white w-[60px] h-[60px] flex items-center justify-center text-center rounded-full">
+                <i class="fa-solid fa-phone text-[30px] "></i>
+              </div>
+              <p class="text-black text-[30px]">Llamanos</p>
+              <p class="text-[20px] font-bold">+34 960 730 275</p>
+            </div>
+          
+            <div class="bg-white text-[#1AA9FF] w-[40%] h-[20vh] lg:w-[30%] lg:h-[30vh] flex flex-col justify-center items-center rounded-lg gap-[15px] md:w-[40%] md:h-[20vh] ">
+              <div class="bg-[#1AA9FF] text-white w-[60px] h-[60px] flex items-center justify-center text-center rounded-full">
+                <i class="fa-solid fa-envelope text-[30px]"></i>
+              </div>
+              <p class="text-black text-[30px]">Escribenos</p>
+              <p class="font-bold text-[20px]">info@oxygengaming.es</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <ContactForm />
       </section>
     </Container>
   </main>

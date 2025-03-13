@@ -5,13 +5,14 @@ import HeroSection from "@components/hero/HeroSection.astro";
 import AboutSection from "@components/sections/AboutSection.astro";
 import EventsSection from "@components/sections/EventsSection.astro";
 import ClientsSection from "@components/sections/ClientsSection.astro";
+import NewaboutSection from "@components/sections/NewaboutSection.astro";
+import Section from "@components/Section.astro";
+
 ---
 
 <Layout title="Oxygen Gaming - Organización de eventos">
-  <Container>
     <HeroSection />
-    <ClientsSection />
-    <AboutSection />
+    <NewaboutSection />
     <EventsSection />
-  </Container>
+    <ClientsSection />
 </Layout>
