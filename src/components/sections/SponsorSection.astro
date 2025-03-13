@@ -1,13 +1,27 @@
 ---
 import SponsorsCarrousel from "@components/carrousels/SponsorsCarrousel.astro";
+import ClientestaticCarrousel from "@components/carrousels/ClientestaticCarrousel.astro";
 import Section from "@components/Section.astro";
+import ClientsSection from "./ClientsSection.astro";
+
+
 ---
 
 <section class="mt-20 p-10" id="clients">
-  <Section title="Marcas con las que hemos colaborado" />
+  <Section title="NUESTROS CLIENTES" />
+  <div class="grid grid-cols-1 items-center justify-center mt-5">
+    <div class="col-span-1">
+      <ClientestaticCarrousel />
+    </div>
+  </div>
+
+  <Section title="COLABORADORES" />
   <div class="grid grid-cols-1 items-center justify-center mt-5">
     <div class="col-span-1">
       <SponsorsCarrousel />
     </div>
   </div>
+
+
+  
 </section>
