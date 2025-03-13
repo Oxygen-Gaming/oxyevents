@@ -1,6 +1,8 @@
 ---
 import EventsCarrousel from "@components/carrousels/EventsCarrousel.astro";
 import Section from "@components/Section.astro";
+import EventCard from "@components/cards/EventCard.astro";
+const imagesAlbal = ["event1.webp", "event2.webp"];
 ---
 
 <section class="mt-20 mb-20" id="events">
@@ -16,27 +18,93 @@ import Section from "@components/Section.astro";
   </h3>
   <div class="grid grid-cols-1 items-center justify-center mt-5 text-center">
     <div class="col-span-1">
-      <EventsCarrousel />
-      <a
-        href="/eventos"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mainblue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Ver todos los eventos
-        <svg
-          class="w-3.5 h-3.5 ml-2"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+      <!-- <EventsCarrousel /> -->
+
+
+  <div class="  swiper  ">
+    <div class="
+     lg:ml-[90px] md:ml-[0px] ml-[0px] swiper-wrapper ">
+      <div class="swiper-slide col-span-1 p-4">
+        <EventCard
+          name="CASAL JOVE TALES"
+          img="casaljovetales"
+          images={imagesAlbal}
+          date="06-01-2024"
+        />
+      </div>
+      <div class="swiper-slide col-span-1 p-4">
+        <EventCard
+          name="EVENTO PUÇOL"
+          img="puzol"
+          images={imagesAlbal}
+          date="03-01-2024"
+        />
+      </div>
+      <div class="swiper-slide col-span-1 p-4">
+        <EventCard
+          name="EVENTO SANT JOAN DE MORÓ"
+          img="sanjoandemoro"
+          images={imagesAlbal}
+          date="02-01-2024"
+        />
+      </div>
+      <div class="swiper-slide col-span-1 p-4">
+        <EventCard
+          name="EVENTO GESTALGAR"
+          img="gestalgar"
+          images={imagesAlbal}
+          date="29-12-2023"
+        />
+      </div>
+    </div>
+      <a href="/eventos" 
+        class="mt-[30px] inline-flex items-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-blue-600 hover:to-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-400 relative overflow-hidden group"> 
+        <span class="absolute inset-0 bg-white opacity-10 blur-xl scale-150 transition-all duration-500 group-hover:opacity-20"></span>
+        <span class="relative z-10">Ver todos los eventos</span>
+        <svg class="w-6 h-6 ml-3 relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10">
+            <path stroke="currentColor" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
         </svg>
-      </a>
+      </a> 
     </div>
   </div>
 </section>
+<script>
+  // Import Swiper core and required modules
+  import Swiper from 'swiper';
+  import 'swiper/css';
+  import { Navigation, Autoplay } from "swiper/modules";
+  import "swiper/css/navigation";
+
+  // Initialize Swiper with specified options
+  new Swiper(".swiper", {
+    modules: [Navigation, Autoplay],
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      // pantalla es >= 768px
+      768:{
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // pantalla es >= 1024px
+      1024:{
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+  });
+</script>

@@ -1,13 +1,136 @@
 ---
 import ClientsCarrousel from "@components/carrousels/ClientsCarrousel.astro";
 import Section from "@components/Section.astro";
+import ClientCard from "@components/cards/ClientCard.astro";
 ---
 
 <section class="mt-[200px] p-10" id="clients">
   <Section title="Han confiado en nosotros" />
   <div class="grid grid-cols-1 items-center justify-center mt-5">
     <div class="col-span-1">
-      <ClientsCarrousel />
+      <!-- <ClientsCarrousel /> -->
+      <div class="swiper">
+        <div class="swiper-wrapper" id="-slider">
+          <!-- Each swiper-slide contains a ClientCard component with specific name and image -->
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Albal" img="albal" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Alcala de Xivert" img="alcala" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Concello de Lugo" img="concellolugo" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="FALLA SANTA GENOVEVA" img="fallagenoveva" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="FALLA MORERA" img="fallamorera" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Gandía" img="gandia" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Universidad Católica de Valencia" img="ucv" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Universidad Miguel Hernandez" img="um" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Vinaros" img="vinaros" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Alqueries" img="alqueries" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Nules" img="nules" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Gestalgar" img="gestalgar" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Meliana" img="meliana" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Puçol" img="puzol" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de San Joan de Moró" img="santjoanmoro" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Tales" img="tales" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Teulada" img="teulada" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Campos del Rio" img="campos" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Casas Ibañez" img="casasibanez" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Falla Arxiduc" img="FallaArxiduc" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Falla Montolivet" img="Montolivet" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Museros" img="museros" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de Naquera" img="naquera" />
+          </div>
+          <div class="swiper-slide">
+            <ClientCard name="Ayuntamiento de la Puebla de Híjar" img="puebla" />
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // Import Swiper core and required modules
+        import Swiper from 'swiper';
+        import 'swiper/css';
+        import { Navigation, Autoplay } from "swiper/modules";
+        import "swiper/css/navigation";
+      
+        // Initialize Swiper with specified options
+        new Swiper(".swiper", {
+          modules: [Navigation, Autoplay],
+          loop: true,
+          slidesPerView:"auto",
+          spaceBetween: 10,
+          breakpoints: {
+            // pantalla es >= 768px
+            768:{
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            // pantalla es >= 1024px
+            1024:{
+              slidesPerView: 3,
+              spaceBetween: 40
+            }
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          },
+        });
+      </script>
+      
+      <style>
+        .swiper-slide {
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        .swiper-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
     </div>
   </div>
 </section>
