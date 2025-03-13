@@ -1,60 +1,32 @@
 ---
 import SponsorCard from "@components/cards/SponsorCard.astro";
+
+const sponsors = [
+  { name: "Arena Gaming", img: "Arena_Gaming" },
+  { name: "CD Lugo", img: "CD_Lugo" },
+  { name: "ESAT", img: "ESAT" },
+  { name: "GBest", img: "Gbest" },
+  { name: "GG Tech", img: "GG_Tech" },
+  { name: "Goken", img: "Goken" },
+  { name: "Jimmy Joy", img: "Jimmy_Joy" },
+  { name: "Kabila", img: "Kabila" },
+  { name: "Kelme", img: "Kelme" },
+  { name: "Papanatas", img: "Papanatas" },
+  { name: "Play Seat", img: "Playseat" },
+  { name: "Progresa", img: "Progresa" },
+  { name: "Red Bull", img: "Red_Bull" },
+  { name: "Thrustmaster", img: "Thrustmaster" },
+  { name: "Welme", img: "Welme" },
+  { name: "Atribus", img: "atribus" },
+  { name: "Arozzi", img: "arozzi" },
+  { name: "Black Hat", img: "blackhat" },
+];
 ---
 
 <div class="grid lg:grid-cols-4 grid-cols-1">
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Arena Gaming" img="Arena_Gaming" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="CD Lugo" img="CD_Lugo" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="ESAT" img="ESAT" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="GBest" img="Gbest" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="GG Tech" img="GG_Tech" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Goken" img="Goken" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Jimmy Joy" img="Jimmy_Joy" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Kabila" img="Kabila" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Kelme" img="Kelme" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Papanatas" img="Papanatas" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Play Seat" img="Playseat" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Progresa" img="Progresa" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Red Bull" img="Red_Bull" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Thrustmaster" img="Thrustmaster" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Welme" img="Welme" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Atribus" img="atribus" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Arozzi" img="arozzi" />
-  </div>
-  <div class="col-span-1 p-4">
-    <SponsorCard name="Black Hat" img="blackhat" />
-  </div>
+  {sponsors.map((sponsor) => (
+    <div class="col-span-1 p-4">
+      <SponsorCard name={sponsor.name} img={sponsor.img} />
+    </div>
+  ))}
 </div>

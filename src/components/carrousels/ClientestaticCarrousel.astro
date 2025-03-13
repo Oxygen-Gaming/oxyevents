@@ -1,0 +1,41 @@
+---
+import ClientCard from "@components/cards/ClientCard.astro";
+const clients = [
+  { name: "Ayuntamiento de Albal", img: "albal" },
+  { name: "Ayuntamiento de Alcala de Xivert", img: "alcala" },
+  { name: "Concello de Lugo", img: "concellolugo" },
+  { name: "FALLA SANTA GENOVEVA", img: "fallagenoveva" },
+  { name: "FALLA MORERA", img: "fallamorera" },
+  { name: "Ayuntamiento de Gandía", img: "gandia" },
+  { name: "Universidad Católica de Valencia", img: "ucv" },
+  { name: "Universidad Miguel Hernandez", img: "um" },
+  { name: "Ayuntamiento de Vinaros", img: "vinaros" },
+  { name: "Ayuntamiento de Alqueries", img: "alqueries" },
+  { name: "Ayuntamiento de Nules", img: "nules" },
+  { name: "Ayuntamiento de Gestalgar", img: "gestalgar" },
+  { name: "Ayuntamiento de Meliana", img: "meliana" },
+  { name: "Ayuntamiento de Puçol", img: "puzol" },
+  { name: "Ayuntamiento de San Joan de Moró", img: "santjoanmoro" },
+  { name: "Ayuntamiento de Tales", img: "tales" },
+  { name: "Ayuntamiento de Teulada", img: "teulada" },
+  { name: "Ayuntamiento de Campos del Rio", img: "campos" },
+  { name: "Ayuntamiento de Casas Ibañez", img: "casasibanez" },
+  { name: "Falla Arxiduc", img: "FallaArxiduc" },
+  { name: "Falla Montolivet", img: "Montolivet" },
+  { name: "Ayuntamiento de Museros", img: "museros" },
+  { name: "Ayuntamiento de Naquera", img: "naquera" },
+  { name: "Ayuntamiento de la Puebla de Híjar", img: "puebla" },
+];
+
+
+---
+
+
+
+<div class="grid lg:grid-cols-4 grid-cols-1">
+  {clients.map((client) => (
+    <div class="col-span-1 p-4">
+      <ClientCard name={client.name} img={client.img} />
+    </div>
+  ))}
+</div>

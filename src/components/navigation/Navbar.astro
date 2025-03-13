@@ -29,6 +29,7 @@ import DropDownButton from "@components/navigation/DropDownButton.astro";
   window.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     const navButtons = document.getElementsByClassName("nav-button"); // Colección de elementos
+    const menu_burguer = document.getElementById('menu_burguer')
 
     if (window.scrollY > 50) {
         navbar.classList.add("bg-white", "shadow-lg", "top-0");
@@ -37,12 +38,15 @@ import DropDownButton from "@components/navigation/DropDownButton.astro";
         for (let button of navButtons) {
             button.style.color = "black";
         }
+        menu_burguer.style.color = "black"
     } else {
         navbar.classList.remove("bg-white", "shadow-lg", "top-0");
 
         // Restaurar el color original (ajústalo según sea necesario)
         for (let button of navButtons) {
             button.style.color = ""; // Vuelve al color por defecto del CSS
+
+            menu_burguer.style.color = ""
         }
     }
 });
