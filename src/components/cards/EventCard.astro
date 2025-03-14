@@ -4,13 +4,13 @@ const { name, img, date, description, images } = Astro.props;
 ---
 
 <div
-  class="max-w-sm border border-[#4C1D95] rounded-lg shadow-lg overflow-hidden flex flex-col h-full
+  class="border border-[#4C1D95] rounded-lg shadow-lg overflow-hidden flex flex-col 
          bg-gradient-to-b from-[#1E3A8A] to-[#6D28D9] transition-all duration-500 
-         hover:shadow-[0px_4px_20px_rgba(109,40,217,0.6)] hover:border-[blue] hover:border-[5x]"
+         hover:shadow-[0px_4px_20px_rgba(109,40,217,0.6)] hover:border-[blue] hover:border-[5x] h-[30vh] lg:w-[40vh] lg:h-[60vh] md:w-[20vh] md:h-[30vh]""
 >
   <div>
     <img
-      class="rounded-t-lg aspect-square hover:animate-[pulse_1s_ease-in-out_1] transition-all duration-500 h-[70vh] lg:h-[60vh] w-full "
+      class="rounded-t-lg aspect-square hover:animate-[pulse_1s_ease-in-out_1] transition-all duration-500 h-[30vh] lg:h-[60vh] w-[100%] md:h-[30vh]"
       src={`events/${img}.webp`}
       alt={name}
     />

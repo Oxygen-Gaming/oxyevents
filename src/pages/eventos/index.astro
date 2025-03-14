@@ -9,17 +9,26 @@ import Section from "@components/Section.astro";
   <main class="text-white">
     <Container>
       <section class="mt-20" id="events">
-        <Section title="Nuestros Eventos" />
-        <h2 class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center">
-          Nuestros eventos se caracterizan por ser una actividad de ocio para
-          todo tipo de público en la cual el asistente se sumerge en las últimas
-          tecnologías de la mano del deporte tradicional.
-        </h2>
-        <h3 class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center">
-          Trabajamos en la realización de eventos para ayuntamientos,
-          cumpleaños, jornadas de universidades y colegios, eventos de empresa.
-        </h3>
-        <div class="grid grid-cols-1 items-center justify-center mt-5">
+        <section id="events" >
+          <div class="flex flex-col items-center justify-center">
+            <div class="p-10 text-center flex justify-center items-center flex-col gap-[5vh]">
+              <Section title="Nuestros Eventos" />
+              <h2 class="text-[15px] font-syne-bold text-white w-[75%] lg:text-center text-justify">
+                Nuestros eventos se caracterizan por ser una actividad de ocio para
+                todo tipo de público en la que el asistente se sumerge en las últimas
+                tecnologías de la mano del deporte tradicional.
+              </h2>
+            </div>
+          </div>
+          
+          <div class="z-[-10] absolute inset-0 opacity-20 w-full mt-[100px]">
+            <video autoplay muted loop class="w-full object-cover h-full md:h-[60%] ">
+              <source src="./public/imgs/VideoInicio_Eventos.mp4" type="video/mp4" />
+            </video>
+          </div>
+    
+        
+        <div class="grid grid-cols-1 items-center justify-center mt-[42vh] md:mt-[35vh] lg:mt-[30vh] mb-[100px]">
           <div class="col-span-1">
             <EventsCarrousel page="true" />
           </div>
@@ -28,3 +37,6 @@ import Section from "@components/Section.astro";
     </Container>
   </main>
 </Layout>
+
+
+
