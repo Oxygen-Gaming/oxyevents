@@ -6,8 +6,8 @@ const { name, img } = Astro.props;
   class="min-w-full rounded-lg flex items-center justify-center p-2 hover:contrast-75 transition-all duration-300"
 >
   <img
-    class="rounded-lg h-[200px]"
-    src=`clientes_actualizados/${img}.png`
+    class="rounded-lg lg:h-[300px] h-[250px] w-[250px]"
+    src={`clientes_actualizados/${img}.png`}
     alt={name}
     title={name}
   />

@@ -23,7 +23,7 @@ const sponsors = [
 ];
 ---
 
-<div class="grid lg:grid-cols-4 grid-cols-1">
+<div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
   {sponsors.map((sponsor) => (
     <div class="col-span-1 p-4">
       <SponsorCard name={sponsor.name} img={sponsor.img} />

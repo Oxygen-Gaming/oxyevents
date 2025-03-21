@@ -48,11 +48,15 @@ import "swiper/css/navigation";
 new Swiper("#clients-swiper", {
   modules: [Navigation, Autoplay],
   loop: true,
-  slidesPerView: 5,
+  slidesPerView: 3,
   spaceBetween: 10,
   breakpoints: {
+    10: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
     768: {
-      slidesPerView: 5,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1024: {
