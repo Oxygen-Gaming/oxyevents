@@ -3,16 +3,16 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import Section from "@components/Section.astro";
 ---
-
+<div class="pt-[80px] sm:pt-[60px] md:pt[30px] ">
 <Layout title="Oxygen Gaming Eventos - Sobre Nosotros">
-  <main class="text-white md:-mt-44">
-    <section class="lg:mt-48 mt-12" id="about">
+  <main class="text-white">
+    <section id="about">
       <Section title="Sobre Nosotros" />
       <div id="sobre_nosotros" class="flex flex-col items-center justify-center mt-[30px]">
         <!-- Sección 1 -->
         <div class="w-full bg-blue-500 flex flex-col  md:flex-row justify-center items-center gap-10 h-auto md:h-[600px] shadow-lg p-8">
             <a href="" class="w-full md:w-1/2 flex justify-center">
-                <img class="max-w-[600px] w-full h-[30vh] md:h-[400px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event3.webp" alt="">
+                <img class="max-w-[600px] w-full h-auto md:h-[400px] sm:h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event3.webp" alt="">
             </a>
             <div class="flex flex-col justify-center text-white text-justify text-[18px] w-full md:w-1/2 ">
                 <span class="lg:w-[80%]">Somos la sección de eventos de Oxygen Gaming, club de deportes electrónicos que se encuentra entre los líderes en innovación y crecimiento del sector en España.
@@ -29,14 +29,14 @@ import Section from "@components/Section.astro";
                   entre el deporte y el Gaming..</span>
             </div>
             <a href="" class="w-full md:w-1/2 flex justify-center">
-                <img class="max-w-[600px] w-full h-auto md:h-[400px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event6.webp" alt="">
+                <img class="max-w-[600px] w-full h-auto md:h-[400px] sm:h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event6.webp" alt="">
             </a>
         </div>
     
         <!-- Sección 3 -->
         <div class="w-full bg-blue-500 flex flex-col md:flex-row justify-center items-center gap-10 h-auto md:h-[600px] shadow-lg p-8">
             <a href="" class="w-full md:w-1/2 flex justify-center">
-                <img class="max-w-[600px] w-full h-auto md:h-[400px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event5.webp" alt="">
+                <img class="max-w-[600px] w-full h-auto md:h-[400px] sm:h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event5.webp" alt="">
             </a>
             <div class="flex flex-col justify-center text-white text-justify text-[18px] w-full md:w-1/2">
                 <span class="lg:w-[90%]">Nuestros eventos aportan todo lo necesario para disfrutar de jornadas con modelos de entretenimiento innovadores. Realizamos actividades adaptadas a todo tipo de público donde mostramos que el deporte tradicional y las nuevas tecnologías son perfectos aliados para trabajar el desarrollo físico y cognitivo de los niños y jóvenes.</span>
@@ -49,64 +49,11 @@ import Section from "@components/Section.astro";
                 <span>Cada vez más jóvenes y niños disfrutan de los deportes electrónicos y el mundo gaming, por lo que nuestro objetivo principal es mostrar que se pueden generar experiencias y emociones siempre bajo un uso responsable de los videojuegos. Esto sumado a los valores deportivos forman un tándem perfecto para disfrutar de una jornada llena de entretenimiento.</span>
             </div>
             <a href="" class="w-full md:w-1/2 flex justify-center">
-                <img class="max-w-[600px] w-full h-auto md:h-[400px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event4.webp" alt="">
+                <img class="max-w-[600px] w-full h-auto md:h-[400px] sm:h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-110 shadow-lg" src="/imgs/event4.webp" alt="">
             </a>
           </div>
         </div>
-    
-
-
-
-
-
-      <!-- <div
-        class="grid lg:grid-cols-2 grid-cols-1 p-6 items-center justify-center"
-      >
-        <div class="col-span-1">
-          <img
-            src="/imgs/event2.webp"
-            class="h-96 mr-3 mt-10 rounded-lg bg-blend-color-burn transition-all duration-300"
-            alt="Imagen de un evento"
-          />
-        </div>
-        <div class="col-span-1 text-xl">
-          <p class="font-general-sans-regular text-[#CFD1FF] mt-7">
-            El proyecto surge con el objetivo de fomentar la buena praxis de
-            los deportes electrónicos creando un espacio sano, interactivo y
-            entretenido para todos los públicos, buscando la sinergia perfecta
-            entre el deporte y el Gaming.
-          </p>
-          <p class="font-general-sans-regular text-[#CFD1FF] mt-7">
-            Nuestros eventos aportan todo lo necesario para disfrutar de
-            jornadas con modelos de entretenimiento innovadores. Realizamos
-            actividades adaptadas a todo tipo de público donde mostramos que
-            el deporte tradicional y las nuevas tecnologías son perfectos
-            aliados para trabajar el desarrollo físico y cognitivo de los
-            niños y jóvenes.
-          </p>
-        </div>
-      </div>
-      <div
-        class="grid lg:grid-cols-2 grid-cols-1 p-6 items-center justify-center"
-      >
-        <div class="col-span-1">
-          <p class="font-general-sans-regular text-xl text-[#CFD1FF] mt-7">
-            Cada vez más jóvenes y niños disfrutan de los deportes
-            electrónicos y el mundo gaming, por lo que nuestro objetivo
-            principal es mostrar que se pueden generar experiencias y
-            emociones siempre bajo un uso responsable de los videojuegos. Esto
-            sumado a los valores deportivos forman un tándem perfecto para
-            disfrutar de una jornada llena de entretenimiento.
-          </p>
-        </div>
-        <div class="col-span-1">
-          <img
-            src="/imgs/minigolf.webp"
-            class="h-96 ml-3 mt-10 rounded-lg bg-blend-color-burn transition-all duration-300"
-            alt="Imagen de un mini golf"
-          />
-        </div>
-      </div> -->
     </section>
   </main>
+</div>
 </Layout>

@@ -4,9 +4,45 @@ import Section from "@components/Section.astro";
 import EventCard from "@components/cards/EventCard.astro";
 
 const imagesAlbal = ["event1.webp", "event2.webp"];
+
+const events = [
+{ name: "FALLA PLAZA LA MORERIA", img: "Poster de Gaming X Deport 2.webp", date: "12-03-2023"},
+  { name: "FALLA NOVA DORRIOLS", img: "Poster de Gaming X Deport 4.webp", date: "15-03-2023"},
+  { name: "UNIVERSIDAD CATOLICA DE VALENCIA", img: "Poster de Gaming X Deport 5.webp", date: "09-03-2023"},
+  { name: "PLAZA TIRANT GANDIA", img: "Poster de Gaming X Deport 6.webp", date: "22-04-2023"},
+  { name: "CASAL JOVE ALBALX", img: "Poster de Gaming X Deport 7.webp", date: "15-07-2023"},
+  { name: "CALLE JAI ALAI", img: "Poster de Gaming X Deport 8.webp", date: "11-08-2023"},
+  { name: "ALQUERIES", img: "Poster de Gaming X Deport 9.webp", date: "04-10-2023"},
+  // { name: "UNIVERSIDAD MIGUEL HERNANDEZ", img: "Poster de Gaming X Deport 11.webp", date: "16-10-2023"},
+  // { name: "UNIVERSIDAD MIGUEL HERNANDEZ", img: "Poster de Gaming X Deport 12.webp", date: "06-11-2023"},
+  // { name: "CEIP LOPE VEGA", img: "Poster de Gaming X Deport 13.webp", date: "28-10-2023"},
+  // { name: "TEULADA", img: "Poster de Gaming X Deport 14.webp", date: "27-12-2023 / 28-12-2023"},
+  // { name: "AYUNTAMIENTO DE TALES", img: "Poster de Gaming X Deport 15.webp", date: "29-12-2023"},
+  // { name: "AYUNTAMIENTO DE MELIANA", img: "Poster de Gaming X Deport 16.webp", date: "26-12-2023"},
+  // { name: "AYNTAMIENTO DE GESTALGAR", img: "Poster de Gaming X Deport 17.webp", date: "29-12-2023"},
+  // { name: "AYUNTAMIENTO DE SANT JOAN DE MORO", img: "Poster de Gaming X Deport 18.webp", date: "02-01-2024"},
+  // { name: "AYUNTAMIENTO DE PUZOL", img: "Poster de Gaming X Deport 19.webp", date: "03-01-2024"},
+  // { name: "CASAL JOVE TALES", img: "Poster de Gaming X Deport 21.webp", date: "06-01-2024"},
+  // { name: "AYUNTAMIENTO SANT JOAN DE MORO", img: "Poster de Gaming X Deport 22.webp", date: "02-01-2024"},
+  // { name: "CASAL JOVE TALES", img: "Poster de Gaming X Deport 23.webp", date: "06-01-2024"},
+  // { name: "CASAL IBAÑEZ", img: "Poster de Gaming X Deport 24.webp", date: "27-04-2024"},
+  // { name: "ALCORA", img: "Poster de Gaming X Deport 25.webp", date: "28-12-2024"},
+  // { name: "MUSEROS", img: "Poster de Gaming X Deport 26.webp", date: "27-12-2024"},
+  // { name: "CEIP STA M.MAGDALENA", img: "Poster de Gaming X Deport 28.webp", date: "23-12-2024"},
+  // { name: "MELIANA", img: "Poster de Gaming X Deport 29.webp", date: "26-12-2024"},
+  // { name: "EDIFICI POLIFUNCIONAL ALCORA", img: "Poster de Gaming X Deport 30.webp", date: "28-12-2024"},
+  // { name: "MERCADO DE CASAS IBAÑEZ", img: "Poster de Gaming X Deport 31.webp", date: "29-12-2024"},
+  // { name: "PUZOL", img: "Poster de Gaming X Deport 32.webp", date: "30-12-2024"},
+  // { name: "PLAZA DE AMISTAT", img: "Poster de Gaming X Deport 33.webp", date: "30-12-2024"},
+  // { name: "ESPAI JOVE CHIVA", img: "Poster de Gaming X Deport 34.webp", date: "02-01-2025"},
+  // { name: "CAMPOS DE RIO", img: "Poster de Gaming X Deport 35.webp", date: "20-12-2024"},
+  // { name: "EDIFICI POLIFUNCIONAL GUILLEM AGULLO", img: "Poster de Gaming X Deport 36.webp", date: "04-01-2025"},
+  // { name: "SALON POLIVALENTE DE SANIRCAS", img: "Poster de Gaming X Deport 37.webp", date: "27-12-2025"},
+  // { name: "CASTELLON", img: "Poster de Gaming X Deport 39.webp", date: "05-04-2024"},
+];
 ---
 
-<section class="mt-20 mb-20 flex flex-col items-center" id="events">
+<section class="mt-20 mb-20 flex flex-col justify-center items-center overflow-x-hidden" id="events">
   <Section title="Nuestros Eventos" />
 
   <h2 class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center max-w-3xl">
@@ -20,44 +56,14 @@ const imagesAlbal = ["event1.webp", "event2.webp"];
     jornadas de universidades y colegios, eventos de empresa.
   </h3>
 
-  <div class="w-full flex justify-center mt-10">
-    <div class="swiper w-full max-w-7xl">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide flex justify-center p-4">
-          <EventCard
-            name="CASAL JOVE TALES"
-            img="casaljovetales"
-            images={imagesAlbal}
-            date="06-01-2024"
-          />
-        </div>
-
-        <div class="swiper-slide flex justify-center p-4">
-          <EventCard
-            name="EVENTO PUÇOL"
-            img="puzol"
-            images={imagesAlbal}
-            date="03-01-2024"
-          />
-        </div>
-
-        <div class="swiper-slide flex justify-center p-4">
-          <EventCard
-            name="EVENTO SANT JOAN DE MORÓ"
-            img="sanjoandemoro"
-            images={imagesAlbal}
-            date="02-01-2024"
-          />
-        </div>
-
-        <div class="swiper-slide flex justify-center p-4">
-          <EventCard
-            name="EVENTO GESTALGAR"
-            img="gestalgar"
-            images={imagesAlbal}
-            date="29-12-2023"
-          />
-        </div>
+  <div class="w-screen flex justify-center items-center mt-10">
+    <div class="swiper w-[80%] flex justify-evenly items-center">
+      <div class="swiper-wrapper flex justify-evenly items-center p-4 px-0">
+          {events.map((event) => (
+            <div class="swiper-slide flex items-center justify-center">
+              <EventCard name={event.name} img={event.img} images={imagesAlbal} date={event.date} />
+            </div>
+          ))}
       </div>
     </div>
   </div>
@@ -70,9 +76,6 @@ const imagesAlbal = ["event1.webp", "event2.webp"];
            hover:to-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-400 
            relative overflow-hidden group"
   > 
-    <span class="absolute inset-0 bg-white opacity-10 blur-xl scale-150 transition-all 
-                 duration-500 group-hover:opacity-20">
-    </span>
 
     <span class="relative z-10">Ver todos los eventos</span>
 
@@ -107,13 +110,17 @@ const imagesAlbal = ["event1.webp", "event2.webp"];
     spaceBetween: 20,
     centeredSlides: true,
     breakpoints: {
+      76: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
       768: {
         slidesPerView: 3,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 40
+        spaceBetween: 30,
       }
     },
     autoplay: {

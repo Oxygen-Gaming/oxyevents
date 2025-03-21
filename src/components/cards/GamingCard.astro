@@ -3,15 +3,22 @@ const { text, img } = Astro.props;
 ---
 
 <div
-  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266] hover:contrast-75 transition-all duration-300 w-[35vh] lg:w-[40vh]"
+  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266] hover:contrast-75 transition-all duration-300 w-full max-w-[50vh] lg:w-[40vh] h-[50vh] flex flex-col"
 >
-  <a href=`/catalogo/gaming/${text}`>
-    <img
-      class="rounded-t-lg aspect-square h-full"
-      src=`catalogo/gaming/${img}.webp`
-      alt={text}
-    />
+  <a href={`/catalogo/gaming/${text}`} class="flex-grow">
+    <div class="w-full h-[30vh] overflow-hidden">
+      <img
+        class="rounded-t-lg w-full h-full object-cover"
+        src={`/catalogo/gaming/${img}.webp`}
+        alt={text}
+      />
+    </div>
   </a>
-  <h5 class="font-syne-bold text-xl text-white mt-2">{text}</h5>
+  <h5 class="font-syne-bold text-xl text-white mt-2 px-2 flex items-center justify-center h-[10vh]">
+    {text}
+  </h5>
 </div>
+
+
+
 

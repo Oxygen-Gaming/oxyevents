@@ -4,15 +4,13 @@ import Container from "@components/Container.astro";
 import Section from "@components/Section.astro";
 import GamingCarrousel from "@components/carrousels/GamingCarrousel.astro";
 import SportsCarrousel from "@components/carrousels/SportsCarrousel.astro";
-
-
 ---
 
 <Layout title="Oxygen Gaming Eventos - Alquila equipamiento para tu evento">
   <main class="text-white">
 
       <div class="flex flex-col items-center justify-center">
-        <div class="p-10 text-center flex justify-center items-center flex-col gap-[5vh]">
+        <div class="pt-[25vh] lg:pt-[15vh] text-center flex justify-center items-center flex-col gap-[5vh]">
           <Section title="Nuestros Eventos" />
           <h2 class="text-[15px] font-syne-bold text-white w-[75%] lg:text-center text-justify">
             Nuestros eventos se caracterizan por ser una actividad de ocio para
@@ -28,10 +26,10 @@ import SportsCarrousel from "@components/carrousels/SportsCarrousel.astro";
         </video>
       </div>
 
-      <div class="max-[320px]:mt-[50px] min-[330px]:max-[400px]:mt-[360px] lg:mt-[200px]  min-[400px]:mt-[420px] flex flex-col justify-center items-center">
+      <div class="max-[320px]:mt-[50px] min-[330px]:max-[400px]:mt-[360px] lg:mt-[200px] min-[400px]:mt-[420px] flex flex-col justify-center items-center">
           <h3 
             id="boton_catalogo"
-            class="font-bold text-[40px]">VideoJuegos</h3>
+            class="font-bold text-[40px] mt-[-100px] lg:mt-[5vh] sm:mt-[-80vh] md:mt-[-18vh] ">VideoJuegos</h3>
 
           <div  id="gaming">
             <GamingCarrousel />
@@ -39,15 +37,11 @@ import SportsCarrousel from "@components/carrousels/SportsCarrousel.astro";
 
           <h3 
           id="boton_catalogo"
-          class="font-bold text-[40px] mt-[20px]">Deportes</h3>
+          class="font-bold text-[40px] mt-[-100px] lg:mt-[5vh] sm:mt-[-80vh] md:mt-[-18vh]">Deportes</h3>
 
-          <div class="" id="sports">
+          <div id="sports">
             <SportsCarrousel></SportsCarrousel>
           </div>
-
-          
-
-
       </div>
  
   </main>
