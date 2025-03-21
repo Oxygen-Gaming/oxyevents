@@ -1,30 +1,22 @@
 ---
 import RentCard from "@components/cards/RentCard.astro";
+
+const items = [
+  { text: "Playstation 5", img: "ps5" },
+  { text: "Playstation 4", img: "ps4" },
+  { text: "Realidad Virtual", img: "rv" },
+  { text: "Bicicleta Zycle", img: "bike" },
+  { text: "Nintendo WII", img: "wii" },
+  { text: "Simulador conducción", img: "conduccion" },
+  { text: "Nintendo Switch", img: "switch" },
+  { text: "PC Gaming", img: "pc" },
+];
 ---
 
 <div class="grid lg:grid-cols-4 grid-cols-1">
-  <div class="col-span-1 p-4">
-    <RentCard text="Playstation 5" img="ps5" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Playstation 5" img="ps4" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Realidad Virtual" img="rv" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Bicicleta Zycle" img="bike" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Nintendo WII" img="wii" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Simulador conducción" img="conduccion" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="Nintendo Switch" img="switch" />
-  </div>
-  <div class="col-span-1 p-4">
-    <RentCard text="PC Gaming" img="pc" />
-  </div>
+  {items.map((item) => (
+    <div class="col-span-1 p-4">
+      <RentCard text={item.text} img={item.img} />
+    </div>
+  ))}
 </div>

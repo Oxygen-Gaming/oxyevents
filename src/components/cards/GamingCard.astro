@@ -1,0 +1,17 @@
+---
+const { text, img } = Astro.props;
+---
+
+<div
+  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266] hover:contrast-75 transition-all duration-300 w-[35vh] lg:w-[40vh]"
+>
+  <a href=`/catalogo/gaming/${text}`>
+    <img
+      class="rounded-t-lg aspect-square h-full"
+      src=`catalogo/gaming/${img}.webp`
+      alt={text}
+    />
+  </a>
+  <h5 class="font-syne-bold text-xl text-white mt-2">{text}</h5>
+</div>
+

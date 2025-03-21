@@ -1,0 +1,20 @@
+---
+import SportCard from "@components/cards/SportCard.astro";
+
+const items = [
+  { text: "Balonmano", img: "BALONMANO_HORIZONTAL" },
+  { text: "Fútbol Sala", img: "FUTBOL_SALA_HORIZONTAL" },
+  { text: "Hockey", img: "HOCKEY_HORIZONTAL" },
+  { text: "Minigolf", img: "MINIGOLF_HORIZONTAL" },
+  { text: "Voleibol", img: "VOLLEYBALL_HORIZONTAL" }
+];
+
+---
+
+<div class="grid lg:grid-cols-4 grid-cols-1">
+  {items.map((item) => (
+    <div class="col-span-1 p-4">
+      <SportCard text={item.text} img={item.img} />
+    </div>
+  ))}
+</div>

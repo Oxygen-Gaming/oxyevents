@@ -1,0 +1,26 @@
+---
+const { text, img } = Astro.props;
+const items = [
+  { text: "Simulador de Conducción", img: "SIMULADOR_DE_CONDUCCION_HORIZONTAL" },
+  { text: "Nintendo Switch", img: "NINTENDO_SWITCH_HORIZONTAL" },
+  { text: "Bicicleta Zycle", img: "ZYCLE_HORIZONTAL" },
+  { text: "Realidad Virtual", img: "VR_HORIZONTAL" },
+  { text: "Entrenador Icaros", img: "ICAROS_HORIZONTAL" },
+  { text: "Alfombrillas de Baile", img: "DANCING_PADS_HORIZONTAL" },
+  { text: "PlayStation", img: "PLAYSTATION_HORIZONTAL" },
+  { text: "Ring Fit Adventure", img: "RING_FIT_HORIZONTAL" },
+];
+---
+
+<div
+  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266] hover:contrast-75 transition-all duration-300 w-[35vh] lg:w-[40vh]"
+>
+  <a href=`/catalogo/sports/${text}`>
+    <img
+      class="rounded-t-lg aspect-square h-full"
+      src=`catalogo/sports/${img}.webp`
+      alt={text}
+    />
+  </a>
+  <h5 class="font-syne-bold text-xl text-white mt-2">{text}</h5>
+</div>
