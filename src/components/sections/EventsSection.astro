@@ -42,23 +42,12 @@ const events = [
 ];
 ---
 
-<section class="mt-20 mb-20 flex flex-col justify-center items-center overflow-x-hidden" id="events">
+<section class="mt-20 mb-20 flex flex-col justify-center items-center overflow-x-hidden lg:p-0 p-[20px] md:p-[40px]" id="events">
   <Section title="Nuestros Eventos" />
 
-  <h2 class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center max-w-3xl">
-    Nuestros eventos se caracterizan por ser una actividad de ocio para todo
-    tipo de público en la cual el asistente se sumerge en las últimas
-    tecnologías de la mano del deporte tradicional.
-  </h2>
-
-  <h3 class="font-general-sans-regular text-[#CFD1FF] mt-7 text-center max-w-3xl">
-    Trabajamos en la realización de eventos para ayuntamientos, cumpleaños,
-    jornadas de universidades y colegios, eventos de empresa.
-  </h3>
-
-  <div class="w-screen flex justify-center items-center mt-10">
+  <div class="w-screen flex justify-center items-center mt-[50px]">
     <div class="swiper w-[80%] flex justify-evenly items-center">
-      <div class="swiper-wrapper flex justify-evenly items-center p-4 px-0">
+      <div class="swiper-wrapper flex justify-evenly items-center">
           {events.map((event) => (
             <div class="swiper-slide flex items-center justify-center">
               <EventCard name={event.name} img={event.img} images={imagesAlbal} date={event.date} />

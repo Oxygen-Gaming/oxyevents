@@ -1,0 +1,53 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import EventCard from "@components/cards/EventCard.astro";
+const { name } = Astro.params;
+const items = [
+  { name: "FALLA PLAZA LA MORERIA", img: "Poster de Gaming X Deport 2.webp", date: "12-03-2023", description: "Un evento especial en el corazón de las Fallas, donde la tradición y la modernidad se encuentran. Disfruta de actividades interactivas, torneos y espectáculos en un ambiente festivo único." },
+  { name: "FALLA NOVA DORRIOLS", img: "Poster de Gaming X Deport 4.webp", date: "15-03-2023", description: "Una jornada llena de cultura fallera, entretenimiento y actividades para todas las edades. Vive la emoción de la pólvora, la música y los juegos en un espacio diseñado para la diversión." },
+  { name: "UNIVERSIDAD CATOLICA DE VALENCIA", img: "Poster de Gaming X Deport 5.webp", date: "09-03-2023", description: "Un evento educativo y recreativo donde estudiantes y visitantes pueden participar en competiciones, charlas y actividades deportivas, combinando el mundo académico con el entretenimiento." },
+  { name: "PLAZA TIRANT GANDIA", img: "Poster de Gaming X Deport 6.webp", date: "22-04-2023", description: "Un encuentro al aire libre en un entorno emblemático, con torneos de gaming, exhibiciones deportivas y zonas de ocio para disfrutar en familia o con amigos." },
+  { name: "CASAL JOVE ALBALX", img: "Poster de Gaming X Deport 7.webp", date: "15-07-2023", description: "Un espacio juvenil dinámico con actividades interactivas, retos deportivos y competiciones de videojuegos, diseñado para fomentar la convivencia y el entretenimiento saludable." },
+  { name: "CALLE JAI ALAI", img: "Poster de Gaming X Deport 8.webp", date: "11-08-2023", description: "Un evento único donde el gaming y el deporte se fusionan, ofreciendo un día repleto de torneos, desafíos y experiencias inmersivas para todos los asistentes." },
+  { name: "ALQUERIES", img: "Poster de Gaming X Deport 9.webp", date: "04-10-2023", description: "Una jornada llena de energía con competiciones de videojuegos, pruebas deportivas y actividades para todos los públicos en un ambiente festivo y acogedor." },
+  { name: "UNIVERSIDAD MIGUEL HERNANDEZ", img: "Poster de Gaming X Deport 11.webp", date: "16-10-2023", description: "Un evento en el campus universitario donde los estudiantes pueden disfrutar de una combinación de tecnología, deporte y entretenimiento en un solo lugar." },
+  { name: "UNIVERSIDAD MIGUEL HERNANDEZ", img: "Poster de Gaming X Deport 12.webp", date: "06-11-2023", description: "Segunda edición del evento en esta universidad, con más actividades, competiciones y oportunidades para explorar el mundo del gaming y el deporte en un entorno académico." },
+  { name: "CEIP LOPE VEGA", img: "Poster de Gaming X Deport 13.webp", date: "28-10-2023", description: "Un evento diseñado para los más jóvenes, donde podrán disfrutar de juegos, retos y actividades deportivas en un ambiente educativo y divertido." },
+  { name: "TEULADA", img: "Poster de Gaming X Deport 14.webp", date: "27-12-2023 / 28-12-2023", description: "Dos días de actividades intensas con torneos de videojuegos, deportes y experiencias interactivas en un entorno pensado para el entretenimiento de todas las edades." },
+  { name: "AYUNTAMIENTO DE TALES", img: "Poster de Gaming X Deport 15.webp", date: "29-12-2023", description: "Una celebración municipal donde se combinan la tecnología y la actividad física, con propuestas innovadoras para disfrutar en familia." },
+  { name: "AYUNTAMIENTO DE MELIANA", img: "Poster de Gaming X Deport 16.webp", date: "26-12-2023", description: "Un evento abierto a la comunidad con actividades de gaming, deportes y entretenimiento para fomentar la participación y la convivencia." },
+  { name: "AYNTAMIENTO DE GESTALGAR", img: "Poster de Gaming X Deport 17.webp", date: "29-12-2023", description: "Una experiencia interactiva donde los asistentes podrán disfrutar de torneos, pruebas deportivas y talleres tecnológicos en un ambiente lúdico y educativo." },
+  { name: "AYUNTAMIENTO DE SANT JOAN DE MORO", img: "Poster de Gaming X Deport 18.webp", date: "02-01-2024", description: "El inicio del año con un evento lleno de energía, actividades interactivas y una combinación perfecta de deporte y tecnología." },
+  { name: "AYUNTAMIENTO DE PUZOL", img: "Poster de Gaming X Deport 19.webp", date: "03-01-2024", description: "Una jornada diseñada para todas las edades, con juegos, competiciones y actividades físicas en un ambiente familiar y participativo." },
+  { name: "CASAL JOVE TALES", img: "Poster de Gaming X Deport 21.webp", date: "06-01-2024", description: "Un evento juvenil con torneos, retos deportivos y experiencias interactivas pensadas para el disfrute de los más jóvenes." },
+  { name: "CASAL IBAÑEZ", img: "Poster de Gaming X Deport 24.webp", date: "27-04-2024", description: "Un espacio de encuentro donde los asistentes podrán sumergirse en el mundo del gaming, los deportes y la tecnología." },
+  { name: "ALCORA", img: "Poster de Gaming X Deport 25.webp", date: "28-12-2024", description: "Un evento especial en el que se unen la pasión por los videojuegos y el deporte en un entorno comunitario." },
+  { name: "PUZOL", img: "Poster de Gaming X Deport 32.webp", date: "30-12-2024", description: "Un evento lleno de emoción con competiciones, desafíos y experiencias únicas para los asistentes." },
+  { name: "ESPAI JOVE CHIVA", img: "Poster de Gaming X Deport 34.webp", date: "02-01-2025", description: "Un evento dirigido a la juventud, con actividades diseñadas para fomentar la participación y la diversión en comunidad." },
+  { name: "CASTELLON", img: "Poster de Gaming X Deport 39.webp", date: "05-04-2024", description: "Un gran evento con una oferta variada de actividades deportivas, tecnológicas y recreativas para todas las edades." }
+];
+
+const item = items.find(i => i.name === name);
+const imagesAlbal = ["event1.webp", "event2.webp"];
+---
+<Layout title={item ? item.name : "No encontrado"}>
+  <main class="text-white">
+        <div class="gap-[50px]  lg:gap-[30vh] mt-[100px] lg:mt-0 w-full bg-blue-500 flex flex-col sm:flex-row md:flex-row justify-center items-center md:h-[600px] shadow-lg p-8">
+          <div class="flex items-center justify-center w-[50vh] sm:w-[150vh] md:w-[85vh] lg:w-[60vh]">
+            <EventCard name={item.name} img={item.img} images={imagesAlbal} date={item.date} />
+          </div>
+            <div class="flex flex-col justify-center text-white text-justify text-[18px] w-full md:w-1/2">
+              <h3 class="font-bold text-[25px]"><i class="fa-solid fa-location-dot"></i> {item.name}</h3>
+              <span class="font-bold text-[20px] italic"><i class="fa-solid fa-calendar-days"></i> {item.date}</span>
+              <span class="lg:w-[80%]">{item.description}</span>
+              
+              <a href="/eventos">
+                <button class="relative z-10 mt-10 inline-flex items-center px-10 py-2 text-lg font-bold text-blue-500 bg-white rounded shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-blue-600 hover:to-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-400 overflow-hidden group">
+                  Volver
+                </button>
+              </a>
+            </div>
+          </div>
+  </main>
+</Layout>
