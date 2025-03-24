@@ -13,24 +13,26 @@ import NavbarMobileButton from "@components/navigation/NavbarMobileButton.astro"
       <NavbarMobileButton />
     </div>
 
-    <ul class="hidden lg:bg-transparent lg:flex  p-4 mt-4 font-medium rounded-lg lg:flex-row lg:space-x-8 md:mt-0">
+    <ul class="hidden lg:bg-transparent lg:flex items-center justify-center  p-4 mt-4 font-medium rounded-lg lg:flex-row lg:space-x-8 md:mt-0">
       <NavButton name="INICIO" url="/" />
       <NavButton name="SOBRE NOSOTROS" url="/about-us" />
       <NavButton name="EVENTOS" url="/eventos" />
       <NavButton name="CATÁLOGO" url="/catalogo" />
       <NavButton name="CLIENTES" url="/clientes" />
       <NavButton name="CONTACTO" url="/contacto" />
+      <a href="https://oxygengaming.es/"><button class="text-white bg-[#1AA9FF] font-bold rounded px-[16px] py-[8px] sm:px-[10px] sm:py-[8px]">Oxygen Gaming</button></a>
+      
     </ul>
   </div>
 
   <div id="navbar-sticky" class=" items-center justify-between hidden w-full">
-    <ul class="bg-white  lg:bg-transparent flex flex-col p-4 mt-4 font-medium rounded-lg md:flex-row md:gap-[20px] lg:flex-row lg:space-x-8 md:mt-0">
-      <NavButton name="INICIO" url="/" />
+    <ul class="bg-white  lg:bg-transparent flex items-center justify-center sm:gap-[15px] flex-col p-4 mt-4 font-medium rounded-lg sm:flex-row md:flex-row md:gap-[25px] lg:flex-row lg:space-x-8 md:mt-0">
       <NavButton name="SOBRE NOSOTROS" url="/about-us" />
       <NavButton name="EVENTOS" url="/eventos" />
       <NavButton name="CATÁLOGO" url="/catalogo" />
       <NavButton name="CLIENTES" url="/clientes" />
       <NavButton name="CONTACTO" url="/contacto" />
+      <a href="https://oxygengaming.es/"><button class="text-white bg-[#1AA9FF] font-bold rounded px-[16px] py-[8px] sm:px-[10px] sm:py-[8px]">Oxygen Gaming</button></a>
     </ul>
   </div>
 </nav>

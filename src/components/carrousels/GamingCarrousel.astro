@@ -6,17 +6,17 @@ const items = [
   { text: "Nintendo Switch", img: "NINTENDO_SWITCH_HORIZONTAL" },
   { text: "Bicicleta Zycle", img: "ZYCLE_HORIZONTAL" },
   { text: "Realidad Virtual", img: "VR_HORIZONTAL" },
-  { text: "Entrenador Icaros", img: "ICAROS_HORIZONTAL" },
-  { text: "Alfombrillas de Baile", img: "DANCING_PADS_HORIZONTAL" },
+  { text: "Simulador de Vuelo", img: "ICAROS_HORIZONTAL" },
+  { text: "Dancing Pads", img: "DANCING_PADS_HORIZONTAL" },
   { text: "PlayStation", img: "PLAYSTATION_HORIZONTAL" },
   { text: "Ring Fit Adventure", img: "RING_FIT_HORIZONTAL" },
 ];
 
 ---
 
-<div class="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 sm:grid-cols-3">
+<div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
   {items.map((item) => (
-    <div class="col-span-1 p-4">
+    <div class="col-span-1 sm:p-8">
       <GamingCard text={item.text} img={item.img} />
     </div>
   ))}

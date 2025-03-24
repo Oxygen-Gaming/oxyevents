@@ -1,20 +1,19 @@
 ---
 const { text, img } = Astro.props;
 ---
-
-<div
-  class="bg-[#11123b] rounded-xl text-center py-2 m-5 border border-[#212266] hover:contrast-75 transition-all duration-300 w-full max-w-[50vh] lg:w-[40vh] h-[50vh] flex flex-col"
->
-  <a href={`/catalogo/sports/${text}`} class="flex-grow">
-    <div class="w-full h-[30vh] overflow-hidden">
-      <img
-        class="rounded-t-lg w-full h-full object-cover"
-        src={`/catalogo/sports/${img}.webp`}
-        alt={text}
-      />
-    </div>
-  </a>
-  <h5 class="font-syne-bold text-xl text-white mt-2 px-2 flex items-center justify-center h-[10vh]">
-    {text}
-  </h5>
-</div>
+<a href={`/catalogo/sports/${text}`} class="flex-grow">
+  <div
+    class="bg-[#11123b] sm:h-[60vh] md:h-[20rem] rounded-xl text-center py-2 border border-[#212266] hover:contrast-75 transition-all duration-300 w-full lg:w-[40vh] h-[50vh] flex flex-col"
+  >
+      <div class="w-full h-[30vh] overflow-hidden">
+        <img
+          class="rounded-t-lg w-full h-full object-cover"
+          src={`/catalogo/sports/${img}.webp`}
+          alt={text}
+        />
+      </div>
+      <h5 class="font-syne-bold text-[23px] lg:text-xl lg:mb-[20px] md:text-[33px] md:mt-[30px] sm:mt-[30px] mb-[20px] text-white flex items-center justify-center h-[10vh]">
+        {text}
+    </h5>
+  </div>
+</a>
