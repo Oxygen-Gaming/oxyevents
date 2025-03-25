@@ -7,7 +7,15 @@ import Section from "@components/Section.astro";
 <Layout title="Oxygen Gaming Eventos - Sobre Nosotros">
     <main class="text-white">
         <section id="about">
-            <Section title="Sobre Nosotros" />
+            <div class="flex flex-col items-center justify-center h-[100vh]">
+                <div class="p-10 text-center flex justify-center items-center flex-col gap-[5vh] mb-[40vh]">
+                  <Section title="Sobre Nosotros" />
+                </div>
+              </div>
+              
+              <div class="z-[-10] absolute inset-0 opacity-20 w-full mt-[100px] ">
+                <img src="../../../public/imgs/header_catalogo.webp" alt="">
+              </div>
             <div id="sobre_nosotros" class="flex flex-col items-center justify-center mt-[30px]">
                 <!-- Sección 1 -->
                 <div class="w-full bg-blue-500 flex flex-col md:flex-row justify-center items-center gap-10 h-auto md:h-[600px] shadow-lg p-8">
