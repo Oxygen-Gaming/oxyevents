@@ -42,14 +42,14 @@ const clients = [
 <script>
 import Swiper from "swiper";
 import "swiper/css";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css/navigation";
+import { Autoplay } from "swiper/modules";
 
 new Swiper("#clients-swiper", {
-  modules: [Navigation, Autoplay],
+  modules: [Autoplay],
   loop: true,
   slidesPerView: 3,
   spaceBetween: 10,
+  allowTouchMove: false, // Disable touch and mouse interactions
   breakpoints: {
     10: {
       slidesPerView: 1,
