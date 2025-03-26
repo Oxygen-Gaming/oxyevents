@@ -1,8 +1,8 @@
 ---
 const images = [
-  { src: "/imgs/Competición_Foto.webp", text: "Tecnología" },
-  { src: "/imgs/gamingxdeporte_Foto.webp", text: "Deporte" },
-  { src: "/imgs/Ponencias_Foto.webp", text: "Ponencias" },
+  { src: "/imgs/Competición_Foto.webp", text: "TECNOLOGÍA", url: "/catalogo/#gaming" },
+  { src: "/imgs/gamingxdeporte_Foto.webp", text: "DEPORTE", url: "/catalogo/#sports" },
+  { src: "/imgs/Ponencias_Foto.webp", text: "PONENCIAS", url: "/catalogo" }
 ];
 ---
 
@@ -13,12 +13,12 @@ const images = [
     </div>
     <div class="bg-[#1AA9FF] pt-[30px] pb-[30px] w-[100%] h-[60vh] grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
       {images.map((image, index) => (
-        <div class="relative overflow-hidden rounded-lg shadow-lg group" id={`image-${index}`}>
+        <a href={image.url} class="relative overflow-hidden rounded-lg shadow-lg group" id={`image-${index}`}>
           <img src={image.src} alt={`Imagen ${index + 1}`} class="w-full h-[150%] md:h-[100%] object-cover transition-transform duration-300 group-hover:scale-110" />
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-xl font-bold opacity-100">
             {image.text}
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>
