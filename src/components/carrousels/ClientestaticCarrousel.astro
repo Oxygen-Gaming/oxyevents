@@ -1,40 +1,6 @@
 ---
 import ClientCard from "@components/cards/ClientCard.astro";
-
-const clients = [
-  { name: "Ayuntamiento de Albal", img: "Logo D_Albal" },
-  { name: "Ayuntamiento de Alcala de Xivert", img: "Logo D_alcala de Xivert Alcossebre" },
-  { name: "Concello de Lugo", img: "Logo Concello de Lugo" },
-  { name: "FALLA SANTA GENOVEVA", img: "fallagenoveva" },
-  { name: "FALLA MORERA", img: "fallamorera" },
-  { name: "Ayuntamiento de Gandía", img: "Logo Ajuntament de Gandia" },
-  { name: "Universidad Católica de Valencia", img: "Logo Universidad Catolica de Valencia" },
-  { name: "Universidad Miguel Hernandez", img: "Logo Universitas Miguel Hernández" },
-  { name: "Ayuntamiento de Vinaros", img: "Logo Ajuntament de Vinaros" },
-  { name: "Ayuntamiento de Alqueries", img: "Logo Ajuntament de les Alqueries" },
-  { name: "Ayuntamiento de Nules", img: "Logo Ajuntament de Nules" },
-  { name: "Ayuntamiento de Gestalgar", img: "Logo Ayuntamiento de Gestalgar" },
-  { name: "Ayuntamiento de Meliana", img: "Logo Ajuntament de Meliana" },
-  { name: "Ayuntamiento de Puçol", img: "Logo Ajuntament de Pucol" },
-  { name: "Ayuntamiento de San Joan de Moró", img: "Logo Ajuntament de Sant Joan de Moro" },
-  { name: "Ayuntamiento de Tales", img: "tales" },
-  { name: "Ayuntamiento de Teulada", img: "Logo Ajuntament de Teulada" },
-  { name: "Ayuntamiento de Campos del Rio", img: "Logo Ayuntamiento de Campos del Rio" },
-  { name: "Ayuntamiento de Casas Ibañez", img: "Logo Ayuntamiento de Casas de Ibañez" },
-  { name: "Falla Arxiduc", img: "FallaArxiduc" },
-  { name: "Falla Montolivet", img: "Montolivet" },
-  { name: "Ayuntamiento de Museros", img: "museros" },
-  { name: "Ayuntamiento de Naquera", img: "Logo Ajuntament de Naquera" },
-  { name: "Ayuntamiento de la Puebla de Híjar", img: "Logo Ayuntamiento la Puebla de Hijar" },
-  { name: "Ayuntamiento de Ontinyent", img: "Logo Ajuntament D_Ontinyent" },
-  { name: "Ayuntamiento de Cullera", img: "Logo Ajuntament de Cullera" },
-  { name: "Ayuntamiento de de Pedreguer", img: "Logo Ajuntament de Pedreguer" },
-  { name: "Ayuntamiento de Xirivella", img: "Logo Ajuntament de Xirivella" },
-  { name: "Ayuntamiento del Poble Nou de Benitatel", img: "Logo Ajuntament del Poble Nou de Benitatel" },
-  { name: "Ayuntamiento de Gata de Gorgos", img: "Logo Ajuntament Gata de Gorgos" },
-  { name: "Ayuntamiento de Chiva", img: "Logo Ayuntamiento de Chiva" },
-  { name: "Ayuntamiento de Palma de Gandia", img: "Logo Ajuntament Palma de Gandia" },
-];
+import {clients} from "@components/ClientsList.astro";
 
 const firstClients = clients.slice(0, 12);
 const restClients = clients.slice(12);
