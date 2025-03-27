@@ -1,7 +1,6 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import FooterNuevo from "@components/Footer_nuevo.astro";
 import { SEO } from "astro-seo";
 
 interface Props {
@@ -62,7 +61,7 @@ const { title } = Astro.props;
   <body class="bg-bgmain">
     <Header />
     <slot />
-    <FooterNuevo />
+    <Footer />
     <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
     <style is:global>
       @font-face {
