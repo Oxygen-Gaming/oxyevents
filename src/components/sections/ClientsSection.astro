@@ -2,24 +2,8 @@
 import ClientsCarrousel from "@components/carrousels/ClientsCarrousel.astro";
 import Section from "@components/Section.astro";
 import ClientCard from "@components/cards/ClientCard.astro";
+import {clients} from "@components/ClientsList.astro";
 
-const clients = [
-  	{ name: "Concello de Lugo", img: "Logo Concello de Lugo" },
-  	{ name: "Ayuntamiento de Gandía", img: "Logo Ajuntament de Gandia" },
-  	{ name: "Universidad Católica de Valencia", img: "Logo Universidad Catolica de Valencia" },
-  	{ name: "Universidad Miguel Hernandez", img: "Logo Universitas Miguel Hernández" },
-  	{ name: "Ayuntamiento de Puçol", img: "Logo Ajuntament de Pucol" },
-  	{ name: "Ayuntamiento de Campos del Rio", img: "Logo Ayuntamiento de Campos del Rio" },
-	  { name: "Ayuntamiento de Casas Ibañez", img: "Logo Ayuntamiento de Casas de Ibañez" },
-    { name: "Ayuntamiento de Cullera", img: "Logo Ajuntament de Cullera" },
-
-
-    // Faltan los logos de la Junta Fallera y Castellón
-    // { name: "Junta Central Fallera", img: "" },
-    // { name: "Ayuntamiento de Castellón", img: "" },
-
-
-];
 ---
 
 <section class=" mt-[200px] p-10 bg-white" id="clients">
